@@ -1,0 +1,491 @@
+[
+  {
+    "key": "group_global_settings",
+    "title": "Global Settings",
+    "fields": [
+      {
+        "key": "field_gs_site_name",
+        "label": "Site Name",
+        "name": "site_name",
+        "type": "text",
+        "show_in_graphql": 1,
+        "graphql_field_name": "siteName"
+      },
+      {
+        "key": "field_gs_tagline",
+        "label": "Tagline",
+        "name": "tagline",
+        "type": "text",
+        "show_in_graphql": 1
+      },
+      {
+        "key": "field_gs_site_logo",
+        "label": "Site Logo",
+        "name": "site_logo",
+        "type": "image",
+        "return_format": "array",
+        "show_in_graphql": 1,
+        "graphql_field_name": "siteLogo"
+      },
+      {
+        "key": "field_gs_phone",
+        "label": "Phone",
+        "name": "phone",
+        "type": "text",
+        "show_in_graphql": 1
+      },
+      {
+        "key": "field_gs_email",
+        "label": "Email",
+        "name": "email",
+        "type": "email",
+        "show_in_graphql": 1
+      },
+      {
+        "key": "field_gs_address",
+        "label": "Address",
+        "name": "address",
+        "type": "text",
+        "show_in_graphql": 1
+      },
+      {
+        "key": "field_gs_facebook_url",
+        "label": "Facebook URL",
+        "name": "facebook_url",
+        "type": "url",
+        "show_in_graphql": 1,
+        "graphql_field_name": "facebookUrl"
+      },
+      {
+        "key": "field_gs_twitter_url",
+        "label": "Twitter URL",
+        "name": "twitter_url",
+        "type": "url",
+        "show_in_graphql": 1,
+        "graphql_field_name": "twitterUrl"
+      },
+      {
+        "key": "field_gs_github_url",
+        "label": "GitHub URL",
+        "name": "github_url",
+        "type": "url",
+        "show_in_graphql": 1,
+        "graphql_field_name": "githubUrl"
+      },
+      {
+        "key": "field_gs_linkedin_url",
+        "label": "LinkedIn URL",
+        "name": "linkedin_url",
+        "type": "url",
+        "show_in_graphql": 1,
+        "graphql_field_name": "linkedinUrl"
+      },
+      {
+        "key": "field_gs_copyright_text",
+        "label": "Copyright Text",
+        "name": "copyright_text",
+        "type": "text",
+        "show_in_graphql": 1,
+        "graphql_field_name": "copyrightText"
+      },
+      {
+        "key": "field_gs_footer_subscribe_text",
+        "label": "Footer Subscribe Text",
+        "name": "footer_subscribe_text",
+        "type": "text",
+        "show_in_graphql": 1,
+        "graphql_field_name": "footerSubscribeText"
+      },
+      {
+        "key": "field_gs_footer_company_links",
+        "label": "Footer Company Links",
+        "name": "footer_company_links",
+        "type": "repeater",
+        "show_in_graphql": 1,
+        "graphql_field_name": "footerCompanyLinks",
+        "sub_fields": [
+          { "key": "field_gs_fcl_label", "label": "Label", "name": "label", "type": "text", "show_in_graphql": 1 },
+          { "key": "field_gs_fcl_url", "label": "URL", "name": "url", "type": "text", "show_in_graphql": 1 }
+        ]
+      },
+      {
+        "key": "field_gs_footer_quick_links",
+        "label": "Footer Quick Links",
+        "name": "footer_quick_links",
+        "type": "repeater",
+        "show_in_graphql": 1,
+        "graphql_field_name": "footerQuickLinks",
+        "sub_fields": [
+          { "key": "field_gs_fql_label", "label": "Label", "name": "label", "type": "text", "show_in_graphql": 1 },
+          { "key": "field_gs_fql_url", "label": "URL", "name": "url", "type": "text", "show_in_graphql": 1 }
+        ]
+      }
+    ],
+    "location": [
+      [{ "param": "options_page", "operator": "==", "value": "global-settings" }]
+    ],
+    "show_in_graphql": 1,
+    "graphql_field_name": "globalSettingsFields",
+    "active": true,
+    "description": "Sitewide settings: logo, contact info, footer."
+  },
+
+  {
+    "key": "group_page_fields",
+    "title": "Page Fields",
+    "fields": [
+      {
+        "key": "field_page_sections",
+        "label": "Page Sections",
+        "name": "sections",
+        "type": "flexible_content",
+        "button_label": "Add Section",
+        "show_in_graphql": 1,
+        "graphql_field_name": "sections",
+        "layouts": {
+
+          "layout_hero": {
+            "key": "layout_hero",
+            "name": "hero",
+            "label": "Hero Section",
+            "display": "block",
+            "show_in_graphql": 1,
+            "sub_fields": [
+              { "key": "field_hero_tagline", "label": "Tagline", "name": "tagline", "type": "text", "show_in_graphql": 1 },
+              { "key": "field_hero_heading", "label": "Heading", "name": "heading", "type": "textarea", "rows": 3, "show_in_graphql": 1 },
+              { "key": "field_hero_button_label", "label": "Button Label", "name": "button_label", "type": "text", "show_in_graphql": 1, "graphql_field_name": "buttonLabel" },
+              { "key": "field_hero_button_url", "label": "Button URL", "name": "button_url", "type": "url", "show_in_graphql": 1, "graphql_field_name": "buttonUrl" },
+              { "key": "field_hero_bg_image", "label": "Background Image", "name": "background_image", "type": "image", "return_format": "array", "show_in_graphql": 1, "graphql_field_name": "backgroundImage" }
+            ]
+          },
+
+          "layout_intro_features": {
+            "key": "layout_intro_features",
+            "name": "intro_features",
+            "label": "Intro Features",
+            "display": "block",
+            "show_in_graphql": 1,
+            "sub_fields": [
+              { "key": "field_intro_subtitle", "label": "Subtitle", "name": "subtitle", "type": "text", "show_in_graphql": 1 },
+              { "key": "field_intro_heading", "label": "Heading", "name": "heading", "type": "text", "show_in_graphql": 1 },
+              {
+                "key": "field_intro_features",
+                "label": "Features",
+                "name": "features",
+                "type": "repeater",
+                "show_in_graphql": 1,
+                "sub_fields": [
+                  { "key": "field_intro_f_icon", "label": "Icon Class (e.g. ti-desktop)", "name": "icon", "type": "text", "show_in_graphql": 1 },
+                  { "key": "field_intro_f_title", "label": "Title", "name": "title", "type": "text", "show_in_graphql": 1 },
+                  { "key": "field_intro_f_desc", "label": "Description", "name": "description", "type": "textarea", "rows": 2, "show_in_graphql": 1 }
+                ]
+              }
+            ]
+          },
+
+          "layout_about_home": {
+            "key": "layout_about_home",
+            "name": "about_home",
+            "label": "About Section (Home Style)",
+            "display": "block",
+            "show_in_graphql": 1,
+            "sub_fields": [
+              { "key": "field_abouth_subtitle", "label": "Subtitle", "name": "subtitle", "type": "text", "show_in_graphql": 1 },
+              { "key": "field_abouth_heading", "label": "Heading", "name": "heading", "type": "text", "show_in_graphql": 1 },
+              { "key": "field_abouth_subheading", "label": "Sub-heading", "name": "subheading", "type": "text", "show_in_graphql": 1 },
+              { "key": "field_abouth_description", "label": "Description", "name": "description", "type": "wysiwyg", "show_in_graphql": 1 },
+              { "key": "field_abouth_btn_label", "label": "Button Label", "name": "button_label", "type": "text", "show_in_graphql": 1, "graphql_field_name": "buttonLabel" },
+              { "key": "field_abouth_btn_url", "label": "Button URL", "name": "button_url", "type": "url", "show_in_graphql": 1, "graphql_field_name": "buttonUrl" },
+              { "key": "field_abouth_bg_image", "label": "Background Image (left panel)", "name": "background_image", "type": "image", "return_format": "array", "show_in_graphql": 1, "graphql_field_name": "backgroundImage" }
+            ]
+          },
+
+          "layout_about_detail": {
+            "key": "layout_about_detail",
+            "name": "about_detail",
+            "label": "About Detail (with side image + info items)",
+            "display": "block",
+            "show_in_graphql": 1,
+            "sub_fields": [
+              { "key": "field_aboutd_subtitle", "label": "Subtitle", "name": "subtitle", "type": "text", "show_in_graphql": 1 },
+              { "key": "field_aboutd_heading", "label": "Heading", "name": "heading", "type": "text", "show_in_graphql": 1 },
+              { "key": "field_aboutd_description", "label": "Description", "name": "description", "type": "wysiwyg", "show_in_graphql": 1 },
+              { "key": "field_aboutd_btn_label", "label": "Button Label", "name": "button_label", "type": "text", "show_in_graphql": 1, "graphql_field_name": "buttonLabel" },
+              { "key": "field_aboutd_btn_url", "label": "Button URL", "name": "button_url", "type": "url", "show_in_graphql": 1, "graphql_field_name": "buttonUrl" },
+              { "key": "field_aboutd_image", "label": "Side Image", "name": "image", "type": "image", "return_format": "array", "show_in_graphql": 1 },
+              {
+                "key": "field_aboutd_info_items",
+                "label": "Info Items (Mission / Vision / Approach)",
+                "name": "info_items",
+                "type": "repeater",
+                "show_in_graphql": 1,
+                "graphql_field_name": "infoItems",
+                "sub_fields": [
+                  { "key": "field_ai_number", "label": "Number (e.g. 01.)", "name": "number", "type": "text", "show_in_graphql": 1 },
+                  { "key": "field_ai_title", "label": "Title", "name": "title", "type": "text", "show_in_graphql": 1 },
+                  { "key": "field_ai_desc", "label": "Description", "name": "description", "type": "textarea", "show_in_graphql": 1 }
+                ]
+              }
+            ]
+          },
+
+          "layout_counter": {
+            "key": "layout_counter",
+            "name": "counter",
+            "label": "Counter Stats",
+            "display": "block",
+            "show_in_graphql": 1,
+            "sub_fields": [
+              {
+                "key": "field_counter_dark",
+                "label": "Dark Background?",
+                "name": "dark",
+                "type": "true_false",
+                "default_value": 0,
+                "show_in_graphql": 1
+              },
+              {
+                "key": "field_counter_items",
+                "label": "Counter Items",
+                "name": "items",
+                "type": "repeater",
+                "show_in_graphql": 1,
+                "sub_fields": [
+                  { "key": "field_ci_value", "label": "Value (number)", "name": "value", "type": "text", "show_in_graphql": 1 },
+                  { "key": "field_ci_suffix", "label": "Suffix (e.g. +, M)", "name": "suffix", "type": "text", "show_in_graphql": 1 },
+                  { "key": "field_ci_label", "label": "Label", "name": "label", "type": "text", "show_in_graphql": 1 },
+                  { "key": "field_ci_icon", "label": "Icon Class (for dark variant)", "name": "icon", "type": "text", "show_in_graphql": 1 }
+                ]
+              }
+            ]
+          },
+
+          "layout_services": {
+            "key": "layout_services",
+            "name": "services",
+            "label": "Services Section",
+            "display": "block",
+            "show_in_graphql": 1,
+            "sub_fields": [
+              { "key": "field_svc_subtitle", "label": "Subtitle", "name": "subtitle", "type": "text", "show_in_graphql": 1 },
+              { "key": "field_svc_heading", "label": "Heading", "name": "heading", "type": "text", "show_in_graphql": 1 },
+              {
+                "key": "field_svc_items",
+                "label": "Services",
+                "name": "services",
+                "type": "repeater",
+                "show_in_graphql": 1,
+                "sub_fields": [
+                  { "key": "field_svc_icon", "label": "Icon Class (Themify)", "name": "icon", "type": "text", "show_in_graphql": 1 },
+                  { "key": "field_svc_title", "label": "Title", "name": "title", "type": "text", "show_in_graphql": 1 },
+                  { "key": "field_svc_desc", "label": "Description", "name": "description", "type": "textarea", "show_in_graphql": 1 }
+                ]
+              }
+            ]
+          },
+
+          "layout_cta": {
+            "key": "layout_cta",
+            "name": "cta",
+            "label": "CTA Section (with background)",
+            "display": "block",
+            "show_in_graphql": 1,
+            "sub_fields": [
+              { "key": "field_cta_subtitle", "label": "Subtitle", "name": "subtitle", "type": "text", "show_in_graphql": 1 },
+              { "key": "field_cta_heading", "label": "Heading", "name": "heading", "type": "text", "show_in_graphql": 1 },
+              { "key": "field_cta_description", "label": "Description", "name": "description", "type": "text", "show_in_graphql": 1 },
+              { "key": "field_cta_phone", "label": "Phone", "name": "phone", "type": "text", "show_in_graphql": 1 }
+            ]
+          },
+
+          "layout_testimonials": {
+            "key": "layout_testimonials",
+            "name": "testimonials",
+            "label": "Testimonials Section",
+            "display": "block",
+            "show_in_graphql": 1,
+            "sub_fields": [
+              { "key": "field_testi_subtitle", "label": "Subtitle", "name": "subtitle", "type": "text", "show_in_graphql": 1 },
+              { "key": "field_testi_heading", "label": "Heading", "name": "heading", "type": "text", "show_in_graphql": 1 },
+              { "key": "field_testi_bg_gray", "label": "Gray Background?", "name": "bg_gray", "type": "true_false", "default_value": 0, "show_in_graphql": 1, "graphql_field_name": "bgGray" },
+              {
+                "key": "field_testi_items",
+                "label": "Testimonials",
+                "name": "testimonials",
+                "type": "repeater",
+                "show_in_graphql": 1,
+                "sub_fields": [
+                  { "key": "field_testi_text", "label": "Testimonial Text", "name": "text", "type": "textarea", "show_in_graphql": 1 },
+                  { "key": "field_testi_author_name", "label": "Author Name", "name": "author_name", "type": "text", "show_in_graphql": 1, "graphql_field_name": "authorName" },
+                  { "key": "field_testi_author_role", "label": "Author Role", "name": "author_role", "type": "text", "show_in_graphql": 1, "graphql_field_name": "authorRole" }
+                ]
+              }
+            ]
+          },
+
+          "layout_latest_blog": {
+            "key": "layout_latest_blog",
+            "name": "latest_blog",
+            "label": "Latest Blog Posts",
+            "display": "block",
+            "show_in_graphql": 1,
+            "sub_fields": [
+              { "key": "field_lb_subtitle", "label": "Subtitle", "name": "subtitle", "type": "text", "show_in_graphql": 1 },
+              { "key": "field_lb_heading", "label": "Heading", "name": "heading", "type": "text", "show_in_graphql": 1 }
+            ]
+          },
+
+          "layout_cta_block": {
+            "key": "layout_cta_block",
+            "name": "cta_block",
+            "label": "CTA Block (banner bar)",
+            "display": "block",
+            "show_in_graphql": 1,
+            "sub_fields": [
+              { "key": "field_ctab_subtitle", "label": "Subtitle", "name": "subtitle", "type": "text", "show_in_graphql": 1 },
+              { "key": "field_ctab_heading", "label": "Heading", "name": "heading", "type": "text", "show_in_graphql": 1 },
+              { "key": "field_ctab_btn_label", "label": "Button Label", "name": "button_label", "type": "text", "show_in_graphql": 1, "graphql_field_name": "buttonLabel" },
+              { "key": "field_ctab_btn_url", "label": "Button URL", "name": "button_url", "type": "url", "show_in_graphql": 1, "graphql_field_name": "buttonUrl" },
+              { "key": "field_ctab_dark", "label": "Dark Background?", "name": "dark", "type": "true_false", "default_value": 0, "show_in_graphql": 1 }
+            ]
+          },
+
+          "layout_team": {
+            "key": "layout_team",
+            "name": "team",
+            "label": "Team Section",
+            "display": "block",
+            "show_in_graphql": 1,
+            "sub_fields": [
+              { "key": "field_team_subtitle", "label": "Subtitle", "name": "subtitle", "type": "text", "show_in_graphql": 1 },
+              { "key": "field_team_heading", "label": "Heading", "name": "heading", "type": "text", "show_in_graphql": 1 },
+              {
+                "key": "field_team_members",
+                "label": "Team Members",
+                "name": "members",
+                "type": "repeater",
+                "show_in_graphql": 1,
+                "sub_fields": [
+                  { "key": "field_tm_name", "label": "Name", "name": "name", "type": "text", "show_in_graphql": 1 },
+                  { "key": "field_tm_role", "label": "Role / Title", "name": "role", "type": "text", "show_in_graphql": 1 },
+                  { "key": "field_tm_photo", "label": "Photo", "name": "photo", "type": "image", "return_format": "array", "show_in_graphql": 1 },
+                  { "key": "field_tm_facebook", "label": "Facebook URL", "name": "facebook_url", "type": "url", "show_in_graphql": 1, "graphql_field_name": "facebookUrl" },
+                  { "key": "field_tm_twitter", "label": "Twitter URL", "name": "twitter_url", "type": "url", "show_in_graphql": 1, "graphql_field_name": "twitterUrl" },
+                  { "key": "field_tm_instagram", "label": "Instagram URL", "name": "instagram_url", "type": "url", "show_in_graphql": 1, "graphql_field_name": "instagramUrl" },
+                  { "key": "field_tm_linkedin", "label": "LinkedIn URL", "name": "linkedin_url", "type": "url", "show_in_graphql": 1, "graphql_field_name": "linkedinUrl" }
+                ]
+              }
+            ]
+          },
+
+          "layout_portfolio": {
+            "key": "layout_portfolio",
+            "name": "portfolio",
+            "label": "Portfolio Section",
+            "display": "block",
+            "show_in_graphql": 1,
+            "sub_fields": [
+              { "key": "field_port_subtitle", "label": "Subtitle", "name": "subtitle", "type": "text", "show_in_graphql": 1 },
+              { "key": "field_port_heading", "label": "Heading", "name": "heading", "type": "text", "show_in_graphql": 1 }
+            ]
+          },
+
+          "layout_pricing": {
+            "key": "layout_pricing",
+            "name": "pricing",
+            "label": "Pricing Plans",
+            "display": "block",
+            "show_in_graphql": 1,
+            "sub_fields": [
+              { "key": "field_price_subtitle", "label": "Subtitle", "name": "subtitle", "type": "text", "show_in_graphql": 1 },
+              { "key": "field_price_heading", "label": "Heading", "name": "heading", "type": "text", "show_in_graphql": 1 },
+              {
+                "key": "field_price_plans",
+                "label": "Plans",
+                "name": "plans",
+                "type": "repeater",
+                "show_in_graphql": 1,
+                "sub_fields": [
+                  { "key": "field_plan_name", "label": "Plan Name", "name": "name", "type": "text", "show_in_graphql": 1 },
+                  { "key": "field_plan_price", "label": "Price (e.g. $12)", "name": "price", "type": "text", "show_in_graphql": 1 },
+                  { "key": "field_plan_period", "label": "Period", "name": "period", "type": "text", "show_in_graphql": 1 },
+                  { "key": "field_plan_features", "label": "Features (one per line)", "name": "features", "type": "textarea", "show_in_graphql": 1 },
+                  { "key": "field_plan_btn_label", "label": "Button Label", "name": "button_label", "type": "text", "show_in_graphql": 1, "graphql_field_name": "buttonLabel" },
+                  { "key": "field_plan_btn_url", "label": "Button URL", "name": "button_url", "type": "url", "show_in_graphql": 1, "graphql_field_name": "buttonUrl" },
+                  { "key": "field_plan_highlighted", "label": "Highlighted (featured)?", "name": "highlighted", "type": "true_false", "default_value": 0, "show_in_graphql": 1 }
+                ]
+              }
+            ]
+          },
+
+          "layout_contact_info": {
+            "key": "layout_contact_info",
+            "name": "contact_info",
+            "label": "Contact Info + Form",
+            "display": "block",
+            "show_in_graphql": 1,
+            "sub_fields": [
+              { "key": "field_ci_address", "label": "Address", "name": "address", "type": "text", "show_in_graphql": 1 },
+              { "key": "field_ci_email", "label": "Email", "name": "email", "type": "email", "show_in_graphql": 1 },
+              { "key": "field_ci_phone", "label": "Phone", "name": "phone", "type": "text", "show_in_graphql": 1 },
+              { "key": "field_ci_facebook", "label": "Facebook URL", "name": "facebook_url", "type": "url", "show_in_graphql": 1, "graphql_field_name": "facebookUrl" },
+              { "key": "field_ci_twitter", "label": "Twitter URL", "name": "twitter_url", "type": "url", "show_in_graphql": 1, "graphql_field_name": "twitterUrl" },
+              { "key": "field_ci_linkedin", "label": "LinkedIn URL", "name": "linkedin_url", "type": "url", "show_in_graphql": 1, "graphql_field_name": "linkedinUrl" }
+            ]
+          },
+
+          "layout_page_title": {
+            "key": "layout_page_title",
+            "name": "page_title",
+            "label": "Page Title / Hero Banner",
+            "display": "block",
+            "show_in_graphql": 1,
+            "sub_fields": [
+              { "key": "field_pt_subtitle", "label": "Subtitle (small text above)", "name": "subtitle", "type": "text", "show_in_graphql": 1 },
+              { "key": "field_pt_heading", "label": "Heading (large)", "name": "heading", "type": "text", "show_in_graphql": 1 },
+              { "key": "field_pt_breadcrumb_label", "label": "Breadcrumb Label", "name": "breadcrumb_label", "type": "text", "show_in_graphql": 1, "graphql_field_name": "breadcrumbLabel" }
+            ]
+          }
+        }
+      }
+    ],
+    "location": [
+      [{ "param": "post_type", "operator": "==", "value": "page" }]
+    ],
+    "show_in_graphql": 1,
+    "graphql_field_name": "pageFields",
+    "graphql_types": ["Page"],
+    "active": true,
+    "description": "Flexible content sections — reusable across all pages."
+  },
+
+  {
+    "key": "group_portfolio_item",
+    "title": "Portfolio Item Fields",
+    "fields": [
+      {
+        "key": "field_pi_category",
+        "label": "Category",
+        "name": "category",
+        "type": "text",
+        "show_in_graphql": 1
+      },
+      {
+        "key": "field_pi_image",
+        "label": "Image",
+        "name": "image",
+        "type": "image",
+        "return_format": "array",
+        "show_in_graphql": 1
+      }
+    ],
+    "location": [
+      [{ "param": "post_type", "operator": "==", "value": "portfolio" }]
+    ],
+    "show_in_graphql": 1,
+    "graphql_field_name": "portfolioFields",
+    "graphql_types": ["Portfolio"],
+    "active": true,
+    "description": "Fields for the Portfolio custom post type."
+  }
+]

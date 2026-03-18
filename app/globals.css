@@ -1,26 +1,49 @@
-@import "tailwindcss";
-
+/* Reset dark mode overrides to keep template look */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Ensure slick carousel arrows/dots work inside sections */
+.slick-slider {
+  width: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Fix for Next.js Image in portfolio/team sections */
+.team-item img,
+.portflio-item img {
+  display: block;
+  width: 100%;
+}
+
+/* Dropdown menu display on mobile (override bootstrap collapse) */
+@media (max-width: 991px) {
+  .dropdown-menu {
+    position: static !important;
+    display: none;
+    width: 100% !important;
+    text-align: center;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .dropdown.active .dropdown-menu,
+  .dropdown:hover .dropdown-menu {
+    display: block;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Bootstrap 4 utility classes missing in BSv4 npm pkg */
+.ml-auto { margin-left: auto !important; }
+.mr-auto { margin-right: auto !important; }
+.float-right { float: right !important; }
+.float-left { float: left !important; }
+.float-lg-right { float: right !important; }
+.text-lg-right { text-align: right !important; }
+.text-lg-left { text-align: left !important; }
+.text-md-right { text-align: right !important; }
+.text-md-left { text-align: left !important; }
+
+@media (max-width: 991px) {
+  .float-lg-right { float: none !important; }
+  .text-lg-right { text-align: inherit !important; }
+  .ml-lg-4 { margin-left: 0 !important; }
 }
